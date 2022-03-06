@@ -30,6 +30,11 @@
     "@types/react-native": "^0.67.1",
     "@ui-kitten/components": "^5.1.1",
     "@ui-kitten/eva-icons": "^5.1.1",
+    "@react-navigation/native-stack": "^6.5.0",
+    "react-native-gesture-handler": "^2.3.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-responsive-screen": "^1.4.2",
+    "react-native-smooth-pincode-input": "^1.0.9",
     "D": "^1.0.0",
     "add": "^2.0.6",
     "axios": "^0.26.0",
@@ -55,6 +60,7 @@
     "yarn": "^1.22.17",
     "yup": "^0.32.11"
   },
+
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
@@ -72,13 +78,29 @@
     "eslint-plugin-react": "^7.29.3",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
-    "jest": "^27.5.1",
     "jest-circus": "^27.5.1",
-    "metro-react-native-babel-preset": "^0.66.2",
     "react-native-svg-asset-plugin": "^0.5.0",
-    "react-test-renderer": "17.0.2"
+    "@types/react-native": "^0.66.15",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4.4.4"
+  },
+  "resolutions": {
+    "@types/react": "^17"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
