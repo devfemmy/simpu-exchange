@@ -3,17 +3,19 @@ import * as React from 'react';
 import {Image, View} from 'react-native';
 import {Button} from '../../../components/common/Button';
 import {SafeAreaView} from '../../../components/common/SafeAreaView';
-import {globalStyles} from '../../../styles';
+
 import {useNavigation, useTheme} from '@react-navigation/native';
+
 import themedStyles from './styles';
 
 const WelcomeScreen = () => {
+  const styles = useStyleSheet(themedStyles);
   const navigation = useNavigation();
   return (
     <SafeAreaView>
       <View style={styles.lowerContainer}>
-        <Text style={globalStyles.headerText}>Welcome to Simpu!</Text>
-        <Text style={globalStyles.lowerText}>
+        <Text style={styles.headerText}>Welcome to Simpu!</Text>
+        <Text style={styles.lowerText}>
           Sync all your chats into one powerful inbox, Never miss a message
           again!
         </Text>
@@ -32,5 +34,4 @@ const WelcomeScreen = () => {
     </SafeAreaView>
   );
 };
-
 export default WelcomeScreen;

@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		4B914B5C27D6068F00D68323 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B914B5B27D6068E00D68323 /* BootSplash.storyboard */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AD7D73149086C95C2727F0BA /* libPods-Simpu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9501B04E3E79E0BDAA035E /* libPods-Simpu.a */; };
 		D2F3C0BD314FA6D5EFA28ADE /* libPods-Simpu-SimpuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F809BBC11C64E97C09E14E11 /* libPods-Simpu-SimpuTests.a */; };
@@ -39,6 +40,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Simpu/main.m; sourceTree = "<group>"; };
 		2311D21A5DE9CFB7E4A68218 /* Pods-Simpu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpu.debug.xcconfig"; path = "Target Support Files/Pods-Simpu/Pods-Simpu.debug.xcconfig"; sourceTree = "<group>"; };
 		2645FEC079D9542BDEE15A3B /* Pods-Simpu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpu.release.xcconfig"; path = "Target Support Files/Pods-Simpu/Pods-Simpu.release.xcconfig"; sourceTree = "<group>"; };
+		4B914B5B27D6068E00D68323 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = Simpu/BootSplash.storyboard; sourceTree = "<group>"; };
 		5B3DA3AA54ED5177BF9AB623 /* Pods-Simpu-SimpuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpu-SimpuTests.debug.xcconfig"; path = "Target Support Files/Pods-Simpu-SimpuTests/Pods-Simpu-SimpuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Simpu/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C126E8454AA76CA5A8F6E475 /* Pods-Simpu-SimpuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simpu-SimpuTests.release.xcconfig"; path = "Target Support Files/Pods-Simpu-SimpuTests/Pods-Simpu-SimpuTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				4B914B5B27D6068E00D68323 /* BootSplash.storyboard */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -145,7 +148,6 @@
 				5B3DA3AA54ED5177BF9AB623 /* Pods-Simpu-SimpuTests.debug.xcconfig */,
 				C126E8454AA76CA5A8F6E475 /* Pods-Simpu-SimpuTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B914B5C27D6068F00D68323 /* BootSplash.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -483,6 +486,7 @@
 			baseConfigurationReference = 2311D21A5DE9CFB7E4A68218 /* Pods-Simpu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -496,7 +500,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simpu.simpu;
 				PRODUCT_NAME = Simpu;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -509,6 +513,7 @@
 			baseConfigurationReference = 2645FEC079D9542BDEE15A3B /* Pods-Simpu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = Simpu/Info.plist;
@@ -521,7 +526,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simpu.simpu;
 				PRODUCT_NAME = Simpu;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

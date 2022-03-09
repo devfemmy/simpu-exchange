@@ -12,7 +12,7 @@ export const AuthStackNavigator = (): JSX.Element => {
     <AuthStack.Navigator
       initialRouteName="Welcome"
       screenOptions={() => ({
-        headerShown: true,
+        headerShown: false,
       })}>
       <AuthStack.Screen
         options={{title: ''}}

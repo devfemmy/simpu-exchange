@@ -1,5 +1,5 @@
 import {StyleService} from '@ui-kitten/components';
-import {ImageStyle, ViewStyle} from 'react-native';
+import {ImageStyle, TextStyle, ViewStyle} from 'react-native';
 import {hp, wp} from 'src/utils';
 
 interface Styles {
@@ -7,6 +7,8 @@ interface Styles {
   imageStyle: ImageStyle;
   buttonContainer: ViewStyle;
   buttonStyle: ViewStyle;
+  headerText: TextStyle;
+  lowerText: TextStyle;
 }
 const styles = StyleService.create<Styles>({
   lowerContainer: {
@@ -23,6 +25,16 @@ const styles = StyleService.create<Styles>({
   },
   buttonStyle: {
     width: '100%',
+  },
+  headerText: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginBottom: hp(10),
+  },
+  lowerText: {
+    fontSize: 16,
+    opacity: 0.5,
+    textAlign: 'center',
   },
 });
 export default styles;
