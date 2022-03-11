@@ -8,6 +8,7 @@ import {useNavigation} from '@react-navigation/native';
 import {hp, wp} from '../../../utils';
 import {KeyboardAwareScrollView} from '../../../components/common/KeyBoardAvoidingView';
 import PhoneInput from 'react-native-phone-number-input';
+
 const AuthScreen = () => {
   const navigation = useNavigation();
   const phoneInput = useRef<PhoneInput>(null);

@@ -17,7 +17,7 @@ import {Provider} from 'react-redux';
 import {persistor, store} from 'src/store';
 import {PersistGate} from 'redux-persist/integration/react';
 import {MainStackParamList} from './navigation/constants';
-import {AuthStackNavigator} from './navigations/AuthStackNavigator';
+import {RootStack} from './navigation';
 
 export default (): JSX.Element => {
   const navigationRef =
@@ -44,7 +44,7 @@ export default (): JSX.Element => {
           <SafeAreaProvider>
             <StatusBar barStyle="dark-content" />
             <NavigationContainer ref={navigationRef} onReady={onReady}>
-              <AuthStackNavigator />
+              <RootStack />
             </NavigationContainer>
           </SafeAreaProvider>
         </UIKittenProvider>

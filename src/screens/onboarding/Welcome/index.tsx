@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
   lowerContainer: {
     marginVertical: wp(0),
     paddingHorizontal: wp(20),
+    justifyContent: 'flex-end',
   },
   imageStyle: {
     height: '75%',
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
   },
   buttonStyle: {
     width: '100%',
+    marginVertical: 30,
   },
 });
 export default WelcomeScreen;

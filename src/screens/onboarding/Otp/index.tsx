@@ -7,6 +7,7 @@ import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
 import {globalStyles} from '../../../styles';
 import {useNavigation} from '@react-navigation/native';
 import {hp, wp} from '../../../utils';
+import PhoneInput from 'react-native-phone-number-input';
 import {KeyboardAwareScrollView} from '../../../components/common/KeyBoardAvoidingView';
 
 const Otp = () => {
