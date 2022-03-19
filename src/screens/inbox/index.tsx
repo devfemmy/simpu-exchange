@@ -1,10 +1,12 @@
-import React, { useCallback } from 'react';
-import { View, Text} from 'react-native';
+import React from 'react';
+import { View, Text } from 'react-native';
 
-const Inbox = (props): JSX.Element => {
-    return <View>
-        <Text>Welcome</Text>
+const InboxScreen = () => {
+  return (
+    <View>
+      <Text>Inbox</Text>
     </View>
+  );
+};
 
-}
-export default Inbox;
+export default InboxScreen;
