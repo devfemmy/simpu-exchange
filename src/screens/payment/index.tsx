@@ -1,7 +1,7 @@
-import React, {useCallback} from 'react';
-import {View, Text} from 'react-native';
+import React from 'react';
+import { View, Text } from 'react-native';
 
-const Payment = (props): JSX.Element => {
+const Payment = (): JSX.Element => {
   return (
     <View>
       <Text>Payment Screens</Text>

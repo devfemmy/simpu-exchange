@@ -1,4 +1,4 @@
-import {AuthStoreState} from 'src/@types/store';
+import { AuthStoreState } from 'src/@types/store';
 export default {
   token: undefined,
   user: undefined,

@@ -1,3 +1,8 @@
+import 'react-native-gesture-handler/jestSetup';
+import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
+
+require('react-native-reanimated/lib/reanimated2/jestUtils').setUpTests();
+
 global.__reanimatedWorkletInit = jest.fn();
 
 jest.mock('react-native-reanimated', () => {

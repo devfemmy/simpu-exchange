@@ -1,20 +1,23 @@
-import {Input, Text} from '@ui-kitten/components';
-import React, {useRef, useState} from 'react';
-import {StyleSheet, View} from 'react-native';
-import {Button} from '../../../components/common/Button';
-import {SafeAreaView} from '../../../components/common/SafeAreaView';
-import {globalStyles} from '../../../styles';
-import {useNavigation} from '@react-navigation/native';
-import {hp, wp} from '../../../utils';
-import {KeyboardAwareScrollView} from '../../../components/common/KeyBoardAvoidingView';
+import { StyledComponentProps, Text } from '@ui-kitten/components';
+import React, { useRef, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Button } from '../../../components/common/Button';
+import { SafeAreaView } from '../../../components/common/SafeAreaView';
+import { globalStyles } from '../../../styles';
+import { hp, wp } from '../../../utils';
+import { KeyboardAwareScrollView } from '../../../components/common/KeyBoardAvoidingView';
 import PhoneInput from 'react-native-phone-number-input';
+import { MainStackParamList, SCREEN_NAME } from 'src/navigation/constants';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-const AuthScreen = () => {
-  const navigation = useNavigation();
+interface Props
+  extends StyledComponentProps,
+    NativeStackScreenProps<MainStackParamList, SCREEN_NAME.phone> {}
+const AuthScreen = (props: Props) => {
+  const { navigation } = props;
   const phoneInput = useRef<PhoneInput>(null);
   const [value, setValue] = useState('');
-  const [formattedValue, setFormattedValue] = useState('');
-  const [valid, setValid] = useState(false);
+  const [, setFormattedValue] = useState('');
 
   return (
     <SafeAreaView>
@@ -43,7 +46,7 @@ const AuthScreen = () => {
           />
         </View>
         <Button
-          onPress={() => navigation.navigate('Otp')}
+          onPress={() => navigation.navigate(SCREEN_NAME.otp)}
           style={styles.buttonStyle}
           title="Next"
         />

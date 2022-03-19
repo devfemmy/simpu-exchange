@@ -1,4 +1,4 @@
-import {User} from 'src/@types/store';
+import { User } from 'src/@types/store';
 
 export interface Token {
   accessToken: string;

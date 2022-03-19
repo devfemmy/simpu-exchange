@@ -1,6 +1,6 @@
-import {StyleService} from '@ui-kitten/components';
-import {ImageStyle, TextStyle, ViewStyle} from 'react-native';
-import {hp, wp} from 'src/utils';
+import { StyleService } from '@ui-kitten/components';
+import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
+import { hp, wp } from 'src/utils';
 
 interface Styles {
   container: ViewStyle;

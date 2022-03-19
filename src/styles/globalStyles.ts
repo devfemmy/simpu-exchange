@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 // import { colors } from '../constants';
-import {wp, hp} from '../utils/index';
+import { wp, hp } from '../utils/index';
 
 export const globalStyles = StyleSheet.create({
   wrapper: {

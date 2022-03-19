@@ -1,18 +1,22 @@
-import {StyledComponentProps, Text, useStyleSheet} from '@ui-kitten/components';
-import React, {useCallback} from 'react';
-import {View} from 'react-native';
-import {Button} from '../../../components/common/Button';
+import {
+  StyledComponentProps,
+  Text,
+  useStyleSheet,
+} from '@ui-kitten/components';
+import React, { useCallback } from 'react';
+import { View } from 'react-native';
+import { Button } from '../../../components/common/Button';
 
 import themedStyles from './styles';
-import {MainStackParamList, SCREEN_NAME} from 'src/navigation/constants';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import { MainStackParamList, SCREEN_NAME } from 'src/navigation/constants';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import Onboard from 'src/assets/images/onboarding.svg';
 interface Props
   extends StyledComponentProps,
     NativeStackScreenProps<MainStackParamList, SCREEN_NAME.welcome> {}
 
 const WelcomeScreen = (props: Props): JSX.Element => {
-  const {navigation} = props;
+  const { navigation } = props;
   const styles = useStyleSheet(themedStyles);
   const navigateToAuth = useCallback(() => {
     console.log('to phone called');

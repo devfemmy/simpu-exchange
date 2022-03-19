@@ -1,10 +1,10 @@
-import React, {memo, ComponentProps} from 'react';
-import {StyleSheet, View, StyleProp, ViewStyle} from 'react-native';
+import React, { memo, ComponentProps } from 'react';
+import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
 
-import {Button as BaseButton} from '@ui-kitten/components';
+import { Button as BaseButton } from '@ui-kitten/components';
 
-import {hp} from '../../utils/responsiveDesign';
-import {colors} from '../../constants';
+import { hp } from '../../utils/responsiveDesign';
+import { colors } from '../../constants';
 
 type ButtonProps = ComponentProps<typeof BaseButton> & {
   title: string;
@@ -14,7 +14,7 @@ type ButtonProps = ComponentProps<typeof BaseButton> & {
 };
 
 export const Button = memo(
-  ({title, isLoading = false, style, ...rest}: ButtonProps) => {
+  ({ title, isLoading = false, style, ...rest }: ButtonProps) => {
     return (
       <View style={styles.containerStyle}>
         <BaseButton disabled={isLoading} style={[styles.btn, style]} {...rest}>

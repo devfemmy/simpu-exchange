@@ -1,6 +1,6 @@
 import storage from '@react-native-async-storage/async-storage';
-import {configureStore} from '@reduxjs/toolkit';
-import {Middleware, combineReducers} from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
+import { Middleware, combineReducers } from 'redux';
 import createFlipperDebug from 'redux-flipper';
 import {
   FLUSH,
@@ -13,7 +13,7 @@ import {
   persistStore,
 } from 'redux-persist';
 
-import {StoreState} from 'src/@types/store';
+import { StoreState } from 'src/@types/store';
 
 import authSlice from './auth/reducer';
 

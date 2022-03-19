@@ -1,4 +1,4 @@
-import {Token} from 'src/services/api/auth';
+import { Token } from 'src/services/api/auth';
 
 export interface User {
   id: number;

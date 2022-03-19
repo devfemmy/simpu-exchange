@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import {
   widthPercentageToDP as wdp,
   heightPercentageToDP as hdp,

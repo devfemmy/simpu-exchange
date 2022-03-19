@@ -1,4 +1,4 @@
-import {Dimensions} from 'react-native';
+import { Dimensions } from 'react-native';
 
 export enum SCREEN_NAME {
   auth = 'app.screen.auth',
@@ -9,10 +9,12 @@ export enum SCREEN_NAME {
   inbox = 'app.screen.inbox',
   settings = 'app.screen.settings',
   simpupay = 'app.screen.simpupay',
+  channel = 'app.screen.inbox.channel',
 }
 
 export type MainStackParamList = {
   [SCREEN_NAME.auth]: undefined;
+  [SCREEN_NAME.channel]: undefined;
   [SCREEN_NAME.welcome]: undefined;
   [SCREEN_NAME.phone]: undefined;
   [SCREEN_NAME.otp]: undefined;
