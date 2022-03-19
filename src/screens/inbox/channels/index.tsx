@@ -16,7 +16,7 @@ const ChannelScreen = (props: Props): JSX.Element => {
   return (
     <View style={styles.container}>
       <FlatList
-        contentContainerStyle={styles.listContainer}
+        // contentContainerStyle={styles.listContainer}
         data={[{ id: '1' }, { id: '2' }]}
         renderItem={Channel}
         ListEmptyComponent={<EmptyChannel navigation={navigation} />}
