@@ -15,8 +15,8 @@ function MainMenuScreens() {
   return (
     <BottomTab.Navigator initialRouteName={SCREEN_NAME.inbox}>
       <BottomTab.Screen name={SCREEN_NAME.inbox} component={Inbox} />
-      <BottomTab.Screen name={SCREEN_NAME.inbox} component={Payment} />
-      <BottomTab.Screen name={SCREEN_NAME.inbox} component={Setting} />
+      <BottomTab.Screen name={SCREEN_NAME.simpupay} component={Payment} />
+      <BottomTab.Screen name={SCREEN_NAME.settings} component={Setting} />
     </BottomTab.Navigator>
   );
 }

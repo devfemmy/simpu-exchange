@@ -7,6 +7,7 @@ import { hp, wp } from 'src/utils';
 interface Styles {
   container: ViewStyle;
   headerContainer: ViewStyle;
+  headerTextContainer: ViewStyle;
   channelName: TextStyle;
   channelTime: TextStyle;
   description: TextStyle;
@@ -18,20 +19,29 @@ interface Styles {
 const styles = StyleService.create<Styles>({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    paddingVertical: hp(10),
+    paddingHorizontal: wp(10),
+    borderBottomWidth: 1,
+    borderBottomColor: '#DADEE3',
   },
-  headerContainer: {},
+  headerContainer: {
+    flex: 1,
+    marginLeft: wp(10),
+  },
+  headerTextContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   channelName: {
     fontFamily: FONTS.PRO_SEMI_BOLD,
     fontSize: 17,
     fontWeight: '600',
     textAlign: 'center',
     lineHeight: 22,
-    marginHorizontal: hp(80),
     color: '#1B1212',
-    marginVertical: hp(40),
   },
   channelTime: {
     fontFamily: FONTS.PRO_REGULAR,

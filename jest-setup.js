@@ -26,8 +26,13 @@ jest.mock('redux-persist', () => {
       .mockImplementation((config, reducers) => reducers),
   };
 });
-
+jest.mock('react-native-smooth-pincode-input', ()=> {
+  const View = require('react-native/Libraries/Components/View/View');
+ 
+  return View
+})
 jest.mock('react-native-gesture-handler', () => {
+  
   const View = require('react-native/Libraries/Components/View/View');
   const TouchableOpacity = require('react-native/Libraries/Components/Touchable/TouchableOpacity');
   const TouchableWithoutFeedback = require('react-native/Libraries/Components/Touchable/TouchableWithoutFeedback');

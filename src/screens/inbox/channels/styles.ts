@@ -18,9 +18,9 @@ const styles = StyleService.create<Styles>({
     backgroundColor: 'white',
   },
   listContainer: {
-    flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
+    backgroundColor: 'green',
   },
   lowerContainer: {
     marginVertical: wp(0),
