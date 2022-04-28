@@ -2,10 +2,12 @@ import { StyledComponentProps, useStyleSheet } from '@ui-kitten/components';
 import uuid from 'react-native-uuid';
 import React, { useCallback, useState } from 'react';
 import { View } from 'react-native';
-import { Chat, MessageType } from '@flyerhq/react-native-chat-ui';
+import { Chat, MessageType, defaultTheme } from '@flyerhq/react-native-chat-ui';
 import themedStyles from './styles';
 import { MainStackParamList, SCREEN_NAME } from 'src/navigation/constants';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import ChatInput from './components/chatInput';
 
 interface Props
   extends StyledComponentProps,
@@ -39,7 +41,18 @@ const ChatScreen = (props: Props): JSX.Element => {
 
   return (
     <View style={styles.container}>
-      <Chat messages={messages} onSendPress={handleSendPress} user={user} />
+      <Chat
+        messages={messages}
+        onSendPress={handleSendPress}
+        user={user}
+        theme={{
+          ...defaultTheme,
+          colors: {
+            ...defaultTheme.colors,
+            inputBackground: 'rgba(0,0,0,0.25)',
+          },
+        }}
+      />
     </View>
   );
 };

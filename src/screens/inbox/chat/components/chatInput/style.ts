@@ -1,6 +1,5 @@
 import { StyleService } from '@ui-kitten/components';
 import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
-import FONTS from 'src/constants/fonts';
 import { hp, wp } from 'src/utils';
 
 interface Styles {
@@ -11,8 +10,6 @@ interface Styles {
   buttonStyle: ViewStyle;
   headerText: TextStyle;
   lowerText: TextStyle;
-  fineText: TextStyle;
-  formContainer: ViewStyle;
 }
 const styles = StyleService.create<Styles>({
   container: {
@@ -32,25 +29,10 @@ const styles = StyleService.create<Styles>({
     marginHorizontal: 30,
   },
   buttonStyle: {
-    width: '100%',
+    width: '80%',
     alignSelf: 'center',
-    marginVertical: hp(20),
-  },
-  formContainer: {
-    marginVertical: 20,
-    paddingHorizontal: hp(20),
-    marginBottom: hp(30),
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  fineText: {
-    fontSize: 12,
-    textAlign: 'center',
-    marginVertical: hp(5),
-    lineHeight: 18,
-    fontFamily: FONTS.PRO_REGULAR,
-    color: 'color-neutral-5',
-    paddingHorizontal: wp(50),
+    position: 'absolute',
+    bottom: 0,
   },
   headerText: {
     fontSize: 24,
@@ -58,14 +40,10 @@ const styles = StyleService.create<Styles>({
     marginVertical: hp(0),
   },
   lowerText: {
-    fontSize: 18,
-    color: 'color-charcoal',
-    fontFamily: FONTS.PRO_REGULAR,
-    textAlign: 'center',
+    fontSize: 16,
     opacity: 0.5,
-    lineHeight: 30,
+    textAlign: 'center',
     marginVertical: hp(20),
-    marginHorizontal: wp(30),
   },
 });
 export default styles;

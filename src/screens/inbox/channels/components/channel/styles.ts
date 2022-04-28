@@ -48,6 +48,7 @@ const styles = StyleService.create<Styles>({
     fontSize: 14,
     lineHeight: 22,
     color: '#1B1212',
+    opacity: 0.5,
   },
   description: {
     fontFamily: FONTS.PRO_REGULAR,

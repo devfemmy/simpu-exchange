@@ -28,14 +28,16 @@ const OtpScreen = (props: Props): JSX.Element => {
     <View style={styles.container}>
       <View style={styles.lowerContainer}>
         <Text style={styles.headerText}>Verify Phone Number</Text>
-        <Text style={styles.lowerText}>
-          Please enter the 4 digit code sent to +234 50 123 4567
-        </Text>
+        <Text style={styles.lowerText}>Please enter the 4 digit code sent</Text>
+
+        <Text style={styles.lowerText}>to</Text>
+        <Text style={styles.lowerText}>+234 50 123 4567</Text>
       </View>
       <View style={styles.formContainer}>
         <SmoothPinCodeInput
           cellStyle={styles.cellStyle}
-          codeLength={6}
+          codeLength={4}
+          cellSpacing={27}
           cellStyleFocused={styles.cellFocusedStyle}
           value={code}
           onTextChange={(value: string) => setCode(value)}
@@ -47,7 +49,7 @@ const OtpScreen = (props: Props): JSX.Element => {
         style={styles.buttonStyle}
         title="Verify"
       />
-      <Text style={styles.lowerText}>
+      <Text style={styles.fineText}>
         By continuing you’re indicating that you accept our Terms of Use and our
         Privacy Policy
       </Text>
