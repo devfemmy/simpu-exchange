@@ -9,11 +9,19 @@ import Payment from 'src/screens/payment';
 import Setting from 'src/screens/setting';
 import Auth from 'src/screens/auth';
 import ChatTab from 'src/assets/images/chat.svg';
+import SimpuPayActive from 'src/assets/images/bc.svg';
 import SettingTab from 'src/assets/images/setting.svg';
 import SettingInactiveTab from 'src/assets/images/settingInactive.svg';
 import SimpuPay from 'src/assets/images/simpupay.svg';
 import FONTS from 'src/constants/fonts';
 import { Avatar } from '@ui-kitten/components';
+import {
+  CardStyleInterpolators,
+  createStackNavigator,
+} from '@react-navigation/stack';
+import ReviewRequest from 'src/screens/payment/reviewRequest';
+import { hp } from 'src/utils';
+import Requests from 'src/screens/payment/requests';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 const BottomTab = createBottomTabNavigator();
@@ -55,17 +63,41 @@ const HeaderRight = () => {
   );
 };
 function MainMenuScreens() {
+  // const route = useRoute();
   return (
     <BottomTab.Navigator
       initialRouteName={SCREEN_NAME.inbox}
-      screenOptions={{
+      screenOptions={({ route }) => ({
         headerStyle: {
           borderBottomWidth: 0,
         },
         tabBarStyle: {
           borderTopWidth: 0,
+          backgroundColor:
+            route.name === 'app.screen.simpupay' ? '#3525E6' : 'white',
         },
-      }}
+        tabBarIcon: props => {
+          if (route.name === 'app.screen.simpupay') {
+            return (
+              <SimpuTab
+                {...props}
+                Comp={SimpuPayActive}
+                CompInverse={SimpuPay}
+              />
+            );
+          } else if (route.name === 'app.screen.settings') {
+            return (
+              <SimpuTab
+                {...props}
+                Comp={SettingTab}
+                CompInverse={SettingInactiveTab}
+              />
+            );
+          } else {
+            return <SimpuTab {...props} Comp={ChatTab} CompInverse={ChatTab} />;
+          }
+        },
+      })}
     >
       <BottomTab.Screen
         name={SCREEN_NAME.settings}
@@ -81,13 +113,6 @@ function MainMenuScreens() {
             fontSize: 17,
             color: '#1B1212',
           },
-          tabBarIcon: props => (
-            <SimpuTab
-              {...props}
-              Comp={SettingTab}
-              CompInverse={SettingInactiveTab}
-            />
-          ),
         }}
       />
       <BottomTab.Screen
@@ -106,9 +131,9 @@ function MainMenuScreens() {
           },
           headerLeft: HeaderLeft,
           headerRight: HeaderRight,
-          tabBarIcon: props => (
-            <SimpuTab {...props} Comp={ChatTab} CompInverse={ChatTab} />
-          ),
+          // tabBarIcon: props => (
+          //   <SimpuTab {...props} Comp={ChatTab} CompInverse={ChatTab} />
+          // ),
         }}
       />
       <BottomTab.Screen
@@ -119,20 +144,63 @@ function MainMenuScreens() {
           tabBarShowLabel: false,
           headerStyle: {
             shadowColor: 'transparent',
+            backgroundColor: '#3525E6',
           },
           headerTitleStyle: {
             fontFamily: FONTS.PRO_SEMI_BOLD,
             fontSize: 17,
-            color: '#1B1212',
+            color: '#fff',
           },
-          tabBarIcon: props => (
-            <SimpuTab {...props} Comp={SimpuPay} CompInverse={SimpuPay} />
-          ),
+          // tabBarIcon: props => (
+          //   <SimpuTab {...props} Comp={SimpuPay} CompInverse={SimpuPay} />
+          // ),
         }}
       />
     </BottomTab.Navigator>
   );
 }
+const MainStack = createStackNavigator<MainStackParamList>();
+const MainStackNavigator = (): JSX.Element => {
+  return (
+    <MainStack.Navigator
+      // initialRouteName="Profile"
+      screenOptions={() => ({
+        headerShown: true,
+        headerShadowVisible: false,
+        headerTitleStyle: {
+          fontWeight: '500',
+          fontSize: hp(16),
+        },
+        headerBackTitleVisible: false,
+        headerTitleAlign: 'center',
+        headerTintColor: '#211791',
+        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+      })}
+    >
+      <MainStack.Screen
+        name={SCREEN_NAME.inbox}
+        component={MainMenuScreens}
+        options={() => ({
+          headerShown: false,
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.reviewpay}
+        component={ReviewRequest}
+        options={() => ({
+          title: 'Review Payment Request',
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.request}
+        component={Requests}
+        options={() => ({
+          title: 'Requests',
+        })}
+      />
+    </MainStack.Navigator>
+  );
+};
 
 export const RootStack = (): JSX.Element => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -145,7 +213,7 @@ export const RootStack = (): JSX.Element => (
     />
     <Stack.Screen
       name={SCREEN_NAME.main}
-      component={MainMenuScreens}
+      component={MainStackNavigator}
       options={{
         headerShown: false,
       }}

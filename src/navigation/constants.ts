@@ -6,9 +6,12 @@ export enum SCREEN_NAME {
   phone = 'app.screen.auth.phone',
   otp = 'app.screen.auth.otp',
   main = 'app.screen.main',
+  inner = 'app.screen.inner',
   inbox = 'app.screen.inbox',
   settings = 'app.screen.settings',
   simpupay = 'app.screen.simpupay',
+  reviewpay = 'app.screen.reviewpay',
+  request = 'app.screen.request',
   channel = 'app.screen.inbox.channel',
   chat = 'app.screen.inbox.chat',
 }
@@ -19,11 +22,14 @@ export type MainStackParamList = {
   [SCREEN_NAME.phone]: undefined;
   [SCREEN_NAME.otp]: undefined;
   [SCREEN_NAME.main]: undefined;
+  [SCREEN_NAME.inner]: undefined;
   [SCREEN_NAME.inbox]: undefined;
   [SCREEN_NAME.settings]: undefined;
   [SCREEN_NAME.simpupay]: undefined;
   [SCREEN_NAME.channel]: undefined;
   [SCREEN_NAME.chat]: undefined;
+  [SCREEN_NAME.request]: undefined;
+  [SCREEN_NAME.reviewpay]: undefined;
 };
 
 export const isLargeScreen = Dimensions.get('window').height > 700;

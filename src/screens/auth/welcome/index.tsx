@@ -19,7 +19,6 @@ const WelcomeScreen = (props: Props): JSX.Element => {
   const { navigation } = props;
   const styles = useStyleSheet(themedStyles);
   const navigateToAuth = useCallback(() => {
-    console.log('to phone called');
     navigation.navigate(SCREEN_NAME.phone);
   }, [navigation]);
   return (

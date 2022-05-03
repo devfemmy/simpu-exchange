@@ -9,7 +9,7 @@ const PayPad = (): JSX.Element => {
       <View>
         <Text>N10</Text>
       </View>
-      <View>Add item name</View>
+      {/* <View>Add item name</View> */}
       <View>
         <Number title="1" />
         <Number title="2" />
