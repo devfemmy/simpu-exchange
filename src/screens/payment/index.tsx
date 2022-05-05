@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { View } from 'react-native';
+// import VirtualKeyboard from 'react-native-virtual-keyboard';
 import styles from './styles';
 import { Input, Button, Text } from '@ui-kitten/components';
 import { KeyboardAwareScrollView } from 'src/components/common/KeyBoardAvoidingView';
@@ -44,6 +45,15 @@ const Payment = (props: Props): JSX.Element => {
             keyboardType="default"
             onChangeText={nextValue => setDescValue(nextValue)}
           />
+        </View>
+        <View>
+          {/* <VirtualKeyboard
+            cellStyle={styles.cellStyle}
+            decimal={true}
+            color="white"
+            pressMode="string"
+            onPress={(val: string) => setValue(val)}
+          /> */}
         </View>
       </KeyboardAwareScrollView>
       <View style={styles.footerView}>

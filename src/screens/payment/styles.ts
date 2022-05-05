@@ -23,6 +23,7 @@ interface Styles {
   desc: TextStyle;
   reqText: TextStyle;
   payText: TextStyle;
+  cellStyle: ViewStyle;
 }
 const styles = StyleService.create<Styles>({
   container: {
@@ -121,6 +122,9 @@ const styles = StyleService.create<Styles>({
   },
   payText: {
     color: 'white',
+  },
+  cellStyle: {
+    height: hp(60),
   },
 });
 export default styles;

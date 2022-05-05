@@ -7822,6 +7822,11 @@ react-native-uuid@^2.0.1:
   resolved "https://registry.yarnpkg.com/react-native-uuid/-/react-native-uuid-2.0.1.tgz#ed4e2dfb1683eddb66967eb5dca140dfe1abddb9"
   integrity sha512-cptnoIbL53GTCrWlb/+jrDC6tvb7ypIyzbXNJcpR3Vab0mkeaaVd5qnB3f0whXYzS+SMoSQLcUUB0gEWqkPC0g==
 
+react-native-virtual-keyboard@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-virtual-keyboard/-/react-native-virtual-keyboard-1.2.0.tgz#6e0db4beafb00af98920d4402797ce5ade5c3dac"
+  integrity sha512-2NZJQRV7/PL0rBDjLCCsVkuH8RbYYBvTxIypGvK6x+vMcEaqn1d3BQn7OJSDvVRriGOr7qIoNaklJky31hrOMw==
+
 react-native-webview@^11.17.2:
   version "11.17.2"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.17.2.tgz#5b107edbf95b5eaf789882f03f0c84c3298c1ded"
