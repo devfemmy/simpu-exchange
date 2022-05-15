@@ -10,20 +10,23 @@ interface Styles {
   buttonStyle: ViewStyle;
   headerText: TextStyle;
   lowerText: TextStyle;
+  nameContainer: ViewStyle;
+  cardList: ViewStyle;
 }
 const styles = StyleService.create<Styles>({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#F6F6F6',
   },
   lowerContainer: {
     marginVertical: wp(0),
     paddingHorizontal: wp(20),
   },
   onboardImage: {
-    height: '75%',
+    height: hp(79),
     resizeMode: 'contain',
-    marginTop: hp(20),
+    marginTop: hp(5),
+    borderRadius: 25,
   },
   buttonContainer: {
     marginHorizontal: 30,
@@ -35,15 +38,30 @@ const styles = StyleService.create<Styles>({
     bottom: 0,
   },
   headerText: {
-    fontSize: 24,
+    fontSize: 18,
     textAlign: 'center',
-    marginVertical: hp(0),
+    marginBottom: hp(3),
+    color: '#0A0748',
+    fontWeight: '600',
+    lineHeight: 22,
   },
   lowerText: {
-    fontSize: 16,
+    fontSize: 15,
     opacity: 0.5,
     textAlign: 'center',
-    marginVertical: hp(20),
+    marginVertical: 1.5,
+  },
+  nameContainer: {
+    backgroundColor: 'white',
+    minHeight: hp(100),
+    paddingVertical: hp(20),
+    marginBottom: hp(10),
+  },
+  cardList: {
+    backgroundColor: 'white',
+    marginVertical: hp(10),
+    marginHorizontal: hp(10),
+    borderRadius: 10,
   },
 });
 export default styles;

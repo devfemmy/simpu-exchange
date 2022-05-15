@@ -22,6 +22,9 @@ import {
 import ReviewRequest from 'src/screens/payment/reviewRequest';
 import { hp } from 'src/utils';
 import Requests from 'src/screens/payment/requests';
+import EditProfile from 'src/screens/setting/editProfile';
+import Privacy from 'src/screens/setting/privacy';
+import DataStorage from 'src/screens/setting/storage';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 const BottomTab = createBottomTabNavigator();
@@ -196,6 +199,27 @@ const MainStackNavigator = (): JSX.Element => {
         component={Requests}
         options={() => ({
           title: 'Requests',
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.editprofile}
+        component={EditProfile}
+        options={() => ({
+          title: 'Edit Profile',
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.privacy}
+        component={Privacy}
+        options={() => ({
+          title: 'Privacy and Security',
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.datastorage}
+        component={DataStorage}
+        options={() => ({
+          title: 'Data and Storage',
         })}
       />
     </MainStack.Navigator>

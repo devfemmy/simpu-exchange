@@ -12,6 +12,9 @@ export enum SCREEN_NAME {
   simpupay = 'app.screen.simpupay',
   reviewpay = 'app.screen.reviewpay',
   request = 'app.screen.request',
+  editprofile = 'app.screen.editprofile',
+  privacy = 'app.screen.privacy',
+  datastorage = 'app.screen.datastorage',
   channel = 'app.screen.inbox.channel',
   chat = 'app.screen.inbox.chat',
 }
@@ -30,6 +33,9 @@ export type MainStackParamList = {
   [SCREEN_NAME.chat]: undefined;
   [SCREEN_NAME.request]: undefined;
   [SCREEN_NAME.reviewpay]: undefined;
+  [SCREEN_NAME.editprofile]: undefined;
+  [SCREEN_NAME.privacy]: undefined;
+  [SCREEN_NAME.datastorage]: undefined;
 };
 
 export const isLargeScreen = Dimensions.get('window').height > 700;

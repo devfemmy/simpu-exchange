@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface SelectTabProps {
   session1?: any;
   session2?: any;
@@ -5,4 +7,10 @@ export interface SelectTabProps {
   header2?: string;
   eventActive?: boolean;
   pressed: any;
+}
+export interface LabelListProps {
+  text: string;
+  icon1?: React.ReactNode;
+  icon2?: React.ReactNode;
+  border?: boolean;
 }

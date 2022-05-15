@@ -32,6 +32,11 @@ export const globalStyles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  colBetween: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   rowBetweenNoCenter: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -74,5 +79,22 @@ export const globalStyles = StyleSheet.create({
     right: 0,
     bottom: hp(15),
     paddingHorizontal: wp(15),
+  },
+  addedBorder: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(0, 0, 0, 0.1)',
+  },
+  tagCard: {
+    backgroundColor: 'white',
+    shadowColor: 'rgba(0,0,0,0.2)',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
+    elevation: 5,
+    marginBottom: hp(25),
+    minHeight: hp(44),
   },
 });

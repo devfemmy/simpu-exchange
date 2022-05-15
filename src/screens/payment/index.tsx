@@ -13,6 +13,7 @@ const Payment = (props: Props): JSX.Element => {
   const { navigation } = props;
   const [value, setValue] = React.useState('10');
   const [descValue, setDescValue] = React.useState('');
+  const [hideVirtualKeyBoard, setHideVirtualKeyboard] = React.useState(false);
   const navigateToReviewPay = useCallback(() => {
     navigation.navigate(SCREEN_NAME.reviewpay);
   }, [navigation]);
@@ -37,6 +38,7 @@ const Payment = (props: Props): JSX.Element => {
         <View style={styles.itemDesc}>
           <Input
             style={styles.descInputStyle}
+            onPressIn={() => setHideVirtualKeyboard(true)}
             textStyle={styles.desc}
             value={descValue}
             placeholder="Add item name"
@@ -46,15 +48,17 @@ const Payment = (props: Props): JSX.Element => {
             onChangeText={nextValue => setDescValue(nextValue)}
           />
         </View>
-        <View>
-          <VirtualKeyboard
-            cellStyle={styles.cellStyle}
-            decimal={true}
-            color="white"
-            pressMode="string"
-            onPress={(val: string) => setValue(val)}
-          />
-        </View>
+        {hideVirtualKeyBoard ? null : (
+          <View>
+            <VirtualKeyboard
+              cellStyle={styles.cellStyle}
+              decimal={true}
+              color="white"
+              pressMode="string"
+              onPress={(val: string) => setValue(val)}
+            />
+          </View>
+        )}
       </KeyboardAwareScrollView>
       <View style={styles.footerView}>
         <Button onPress={navigateToReviewPay} style={styles.requestBtn}>
