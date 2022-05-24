@@ -12,5 +12,6 @@ export interface LabelListProps {
   text: string;
   icon1?: React.ReactNode;
   icon2?: React.ReactNode;
+  onPress?: Function;
   border?: boolean;
 }

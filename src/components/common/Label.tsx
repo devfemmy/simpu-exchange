@@ -6,10 +6,12 @@ import { hp } from 'src/utils';
 
 type LabelListProps = ComponentProps<typeof Pressable> & {
   text: string;
+  text2?: string;
   icon1?: React.ReactNode;
   icon2?: React.ReactNode;
   onPress?: Function;
   border?: boolean;
+  borderBottom?: boolean;
   storage?: boolean;
 };
 
@@ -19,6 +21,8 @@ const Labellist = ({
   icon2,
   storage,
   border,
+  borderBottom,
+  text2,
   ...rest
 }: LabelListProps) => {
   const styles = StyleSheet.create({
@@ -28,8 +32,11 @@ const Labellist = ({
     withBorder: {
       borderTopWidth: border ? 1 : 0,
       borderTopColor: 'rgba(60, 60, 67, 0.1)',
+      borderBottomWidth: borderBottom ? 1 : 0,
+      borderBottomColor: 'rgba(60, 60, 67, 0.1)',
       minHeight: 53,
       paddingHorizontal: 10,
+      paddingBottom: borderBottom ? 10 : 0,
     },
     iconWidth: {
       width: '15%',
@@ -39,6 +46,14 @@ const Labellist = ({
       color: '#0A0748',
       fontWeight: '400',
       fontSize: hp(17),
+      lineHeight: hp(24),
+    },
+    textStyle2: {
+      color: '#0A0748',
+      fontWeight: '400',
+      fontSize: hp(13),
+      opacity: 0.5,
+      lineHeight: 16,
     },
   });
   return (
@@ -46,6 +61,7 @@ const Labellist = ({
       {storage ? null : <View>{icon1}</View>}
       <View style={styles.textContainer}>
         <Text style={styles.textStyle}>{text}</Text>
+        {text2 ? <Text style={styles.textStyle2}>{text2}</Text> : null}
       </View>
       <View style={styles.iconWidth}>{icon2}</View>
     </Pressable>

@@ -32,6 +32,12 @@ const Setting = (props: Props): JSX.Element => {
   const navigateDataStorage = React.useCallback(() => {
     navigation.navigate(SCREEN_NAME.datastorage);
   }, [navigation]);
+  const navigateManageChannels = React.useCallback(() => {
+    navigation.navigate(SCREEN_NAME.managesocials);
+  }, [navigation]);
+  const navigateQuickReplies = React.useCallback(() => {
+    navigation.navigate(SCREEN_NAME.quickreplies);
+  }, [navigation]);
   return (
     <ScrollView style={styles.container}>
       <Pressable
@@ -68,11 +74,13 @@ const Setting = (props: Props): JSX.Element => {
       </View>
       <View style={styles.cardList}>
         <Labellist
+          onPress={navigateQuickReplies}
           icon2={<ArrowRight />}
           icon1={<QuoteLeft />}
           text="Quick Replies"
         />
         <Labellist
+          onPress={navigateManageChannels}
           border
           icon2={<ArrowRight />}
           icon1={<StaffIcon />}

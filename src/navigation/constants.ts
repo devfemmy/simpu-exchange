@@ -1,4 +1,5 @@
 import { Dimensions } from 'react-native';
+import { RouteProp } from '@react-navigation/native';
 
 export enum SCREEN_NAME {
   auth = 'app.screen.auth',
@@ -15,6 +16,9 @@ export enum SCREEN_NAME {
   editprofile = 'app.screen.editprofile',
   privacy = 'app.screen.privacy',
   datastorage = 'app.screen.datastorage',
+  managesocials = 'app.screen.managesocials',
+  connectsocials = 'app.screen.connectsocials',
+  quickreplies = 'app.screen.quickreplies',
   channel = 'app.screen.inbox.channel',
   chat = 'app.screen.inbox.chat',
 }
@@ -36,6 +40,15 @@ export type MainStackParamList = {
   [SCREEN_NAME.editprofile]: undefined;
   [SCREEN_NAME.privacy]: undefined;
   [SCREEN_NAME.datastorage]: undefined;
+  [SCREEN_NAME.managesocials]: undefined;
+  [SCREEN_NAME.connectsocials]: {
+    name: string;
+  };
+  [SCREEN_NAME.quickreplies]: undefined;
 };
+export type SocialScreenRouteProp = RouteProp<
+  MainStackParamList,
+  SCREEN_NAME.connectsocials
+>;
 
 export const isLargeScreen = Dimensions.get('window').height > 700;

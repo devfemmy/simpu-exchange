@@ -97,4 +97,19 @@ export const globalStyles = StyleSheet.create({
     marginBottom: hp(25),
     minHeight: hp(44),
   },
+  shadowCard: {
+    backgroundColor: 'white',
+    shadowColor: 'rgba(0,0,0,0.2)',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
+    elevation: 5,
+    borderRadius: 10,
+    marginBottom: hp(25),
+    minHeight: hp(100),
+    padding: wp(15),
+  },
 });

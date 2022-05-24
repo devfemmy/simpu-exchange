@@ -31,6 +31,11 @@ jest.mock('react-native-smooth-pincode-input', ()=> {
  
   return View
 })
+jest.mock('react-native-share', () => {
+  return {
+    open: jest.fn(),
+  };
+});
 jest.mock('react-native-gesture-handler', () => {
   
   const View = require('react-native/Libraries/Components/View/View');

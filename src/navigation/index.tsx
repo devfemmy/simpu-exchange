@@ -25,6 +25,9 @@ import Requests from 'src/screens/payment/requests';
 import EditProfile from 'src/screens/setting/editProfile';
 import Privacy from 'src/screens/setting/privacy';
 import DataStorage from 'src/screens/setting/storage';
+import ConnectSocials from 'src/screens/setting/socialChannels/connectWhatsapp';
+import SocialChannels from 'src/screens/setting/socialChannels';
+import QuickReplies from 'src/screens/setting/quickReplies';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 const BottomTab = createBottomTabNavigator();
@@ -220,6 +223,27 @@ const MainStackNavigator = (): JSX.Element => {
         component={DataStorage}
         options={() => ({
           title: 'Data and Storage',
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.quickreplies}
+        component={QuickReplies}
+        options={() => ({
+          title: 'Quick Replies',
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.managesocials}
+        component={SocialChannels}
+        options={() => ({
+          title: 'Social Channels',
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.connectsocials}
+        component={ConnectSocials}
+        options={({ route }) => ({
+          title: route.params.name,
         })}
       />
     </MainStack.Navigator>
