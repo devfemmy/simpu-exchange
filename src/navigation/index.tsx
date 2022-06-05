@@ -28,6 +28,8 @@ import DataStorage from 'src/screens/setting/storage';
 import ConnectSocials from 'src/screens/setting/socialChannels/connectWhatsapp';
 import SocialChannels from 'src/screens/setting/socialChannels';
 import QuickReplies from 'src/screens/setting/quickReplies';
+import ManageBankAccount from 'src/screens/setting/manageBankAccount';
+import UpdateBankDetails from 'src/screens/setting/manageBankAccount/updateBankDetails';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 const BottomTab = createBottomTabNavigator();
@@ -237,6 +239,20 @@ const MainStackNavigator = (): JSX.Element => {
         component={SocialChannels}
         options={() => ({
           title: 'Social Channels',
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.manageaccount}
+        component={ManageBankAccount}
+        options={() => ({
+          title: 'Manage Bank Account',
+        })}
+      />
+      <MainStack.Screen
+        name={SCREEN_NAME.updateaccount}
+        component={UpdateBankDetails}
+        options={({ route }) => ({
+          title: route.params.name,
         })}
       />
       <MainStack.Screen

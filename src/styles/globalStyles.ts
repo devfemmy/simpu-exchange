@@ -68,6 +68,11 @@ export const globalStyles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: hp(10),
   },
+  headerText2: {
+    fontSize: hp(22),
+    fontWeight: '700',
+    marginTop: hp(20),
+  },
   lowerText: {
     fontSize: 16,
     opacity: 0.5,
@@ -111,5 +116,8 @@ export const globalStyles = StyleSheet.create({
     marginBottom: hp(25),
     minHeight: hp(100),
     padding: wp(15),
+  },
+  textCenter: {
+    textAlign: 'center',
   },
 });

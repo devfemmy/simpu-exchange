@@ -60,7 +60,9 @@ const Labellist = ({
     <Pressable {...rest} style={[globalStyles.rowBetween, styles.withBorder]}>
       {storage ? null : <View>{icon1}</View>}
       <View style={styles.textContainer}>
-        <Text style={styles.textStyle}>{text}</Text>
+        <Text numberOfLines={1} style={styles.textStyle}>
+          {text}
+        </Text>
         {text2 ? <Text style={styles.textStyle2}>{text2}</Text> : null}
       </View>
       <View style={styles.iconWidth}>{icon2}</View>

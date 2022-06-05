@@ -35,6 +35,9 @@ const Setting = (props: Props): JSX.Element => {
   const navigateManageChannels = React.useCallback(() => {
     navigation.navigate(SCREEN_NAME.managesocials);
   }, [navigation]);
+  const navigateManageBankAccount = React.useCallback(() => {
+    navigation.navigate(SCREEN_NAME.manageaccount);
+  }, [navigation]);
   const navigateQuickReplies = React.useCallback(() => {
     navigation.navigate(SCREEN_NAME.quickreplies);
   }, [navigation]);
@@ -87,6 +90,7 @@ const Setting = (props: Props): JSX.Element => {
           text="Manage Social Channels"
         />
         <Labellist
+          onPress={navigateManageBankAccount}
           border
           icon2={<ArrowRight />}
           icon1={<AccountIcon />}
